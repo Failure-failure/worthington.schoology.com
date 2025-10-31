@@ -1,27 +1,42 @@
-
-<!-- Refresh trigger -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Tab</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Game</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: black;
+    }
+
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <iframe 
-        id="game-iframe" 
-        src="https://coppersalts.github.io/HTML5b/" 
-        width="100%" 
-        height="750px" 
-        tabindex="0" 
-        allowfullscreen 
-        allow="fullscreen">
-    </iframe>
-    <script>  
+  <iframe
+    id="game-iframe"
+    src="https://coppersalts.github.io/HTML5b/"
+    allowfullscreen
+    allow="fullscreen">
+  </iframe>
+
+  <script>
     window.onload = function() {
-        const iframe = document.getElementById('game-iframe');
-        iframe.focus();
+      const iframe = document.getElementById('game-iframe');
+      iframe.focus();
     };
-    </script>
+  </script>
 </body>
 </html>
